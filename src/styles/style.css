@@ -1,0 +1,342 @@
+/* Add these styles to your styles.css file */
+:root {
+  --DarkYellow: hsl(41, 98%, 50%);
+  --DarkPurple: #8803fc;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px 0;
+}
+
+.tutorial-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tutorial-list li {
+  margin-bottom: 10px;
+}
+
+/* Basic Styles */
+footer {
+  background-color: #1f2937;
+  color: #d1d5db;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+img.rounded-full {
+  border-radius: 9999px;
+  height: 5rem;
+  width: 5rem;
+}
+
+.hover-text-yellow:hover,
+.hover-text-purple:hover {
+  color: var(--DarkYellow);
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.border-yellow-600 {
+  border-color:var(--DarkYellow);
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+ul.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.space-x-2 > * + * {
+  margin-left: 0.5rem;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-6xl {
+  font-size: 3rem;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  place-content: center;
+}
+
+/* Media Query for Larger Screens (lg: classes) */
+@media (min-width: 1024px) {
+  .lg-mx-auto {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .lg-my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .lg-flex {
+    display: flex;
+  }
+
+  .lg-flex-row {
+    flex-direction: row;
+  }
+
+  .lg-justify-between {
+    justify-content: space-between;
+  }
+
+  .lg-hidden {
+    display: none;
+  }
+
+  .lg-block {
+    display: block;
+  }
+
+  .lg-place-content-center {
+    place-content: center;
+  }
+}
+/* Media Query for Smaller Screens (sm: classes) */
+/* Media Query for Smaller Screens (sm: classes) */
+@media (max-width: 767px) {
+  .container {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 10px; /* Add padding to the container for mobile screens */
+  }
+
+  /* Modify other styles as needed for smaller screens */
+  header {
+    padding: 15px 0; /* Adjust padding for header on smaller screens */
+  }
+
+  nav ul li {
+    display: block; /* Convert list items to block for smaller screens */
+    margin-right: 0; /* Reset margin */
+    margin-bottom: 10px; /* Add margin bottom for space between items */
+  }
+
+  /* Additional padding for the whole body on mobile */
+  footer {
+    padding: 10px; /* Add padding to the body for mobile screens */
+  }
+  
+  /* Add other responsive styles here */
+}
+
+.dark-mode {
+  /* Adjust only background and text colors */
+  background-color: #1f1f1f !important;
+  color: #ffffff !important;
+}
+
+/* Additional styles for specific elements in dark mode */
+.dark-mode nav ul li a {
+  /* Example: Customizing links in the navigation */
+  color: #ccc !important;
+}
+.dark-mode-icon {
+  display: flex;
+  align-items: center;
+  color: inherit; /* To inherit the text color */
+  text-decoration: none; /* Remove default link underline */
+  cursor: pointer; /* Set cursor as pointer on hover */
+}
+
+.dark-mode-icon svg {
+  height: 32px; /* Adjust the height of the SVG icon */
+  width: 32px; /* Adjust the width of the SVG icon */
+  margin-right: 8px; /* Add spacing between the icon and text */
+}
+
+.dark-mode-icon:hover {
+  opacity: 0.8; /* Adjust opacity on hover if needed */
+  color: var(--DarkYellow); /* Change the color on hover */
+}
+
+.certification-link {
+  display: inline-flex;
+  align-items: center;
+  color: #3498db; /* Set the color of the icon */
+  text-decoration: none; /* Remove default link underline */
+  padding: 10px; /* Adjust padding */
+  border-radius: 5px; /* Rounded corners */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.certification-link svg {
+  height: 20px; /* Adjust the height of the SVG icon */
+  width: 20px; /* Adjust the width of the SVG icon */
+  margin-right: 8px; /* Add spacing between the icon and text */
+}
+
+.link-text {
+  font-size: 14px; /* Adjust font size */
+}
+
+.certification-link:hover {
+  color: #2980b9; /* Change icon color on hover */
+}
+
+
+.job-link {
+  display: inline-flex;
+  align-items: center;
+  color: #2ecc71; /* Set the color of the icon */
+  text-decoration: none; /* Remove default link underline */
+  padding: 10px; /* Adjust padding */
+  border-radius: 5px; /* Rounded corners */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.job-link svg {
+  height: 20px; /* Adjust the height of the SVG icon */
+  width: 20px; /* Adjust the width of the SVG icon */
+  margin-right: 8px; /* Add spacing between the icon and text */
+}
+
+.link-text {
+  font-size: 14px; /* Adjust font size */
+}
+
+.job-link:hover {
+  color: #27ae60; /* Change icon color on hover */
+}
+
+
+/* Sign in and Log in Buttons */
+
+.signup-link,
+.login-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--DarkYellow);/* Set the color of the icon */
+  text-decoration: none; /* Remove default link underline */
+  padding: 10px; /* Adjust padding */
+  border-radius: 5px; /* Rounded corners */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.signup-link svg,
+.login-link svg {
+  height: 20px; /* Adjust the height of the SVG icon */
+  width: 20px; /* Adjust the width of the SVG icon */
+  margin-right: 8px; /* Add spacing between the icon and text */
+}
+
+.link-text {
+  font-size: 14px; /* Adjust font size */
+}
+
+.signup-link:hover,
+.login-link:hover {
+  color: var(--DarkYellow);/* Change icon color on hover */
+}
+
+/* logo */
+
+.brand-link {
+  color: var(--DarkYellow);
+  /* Other styles */
+}
+
+.brand-link:hover {
+  color: var(--DarkYellow);
+  /* Other hover styles */
+}
+
+/* Use these variables wherever you need */
+.someClass {
+  background-color: var(--DarkYellow);
+  /* Other styles */
+}
+.signup-link:hover .icon path,
+.signup-link:hover .link-text,
+.login-link:hover .icon path,
+.login-link:hover .link-text {
+  /* Change the color when hovered */
+  fill: var(--DarkYellow); /* Change this to your desired hover color */
+  color: var(--DarkPurple) /* Change this to your desired hover color */
+}
+

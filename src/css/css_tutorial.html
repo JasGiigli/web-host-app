@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial</title>
+    <style>
+      /* Basic CSS Reset */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        width: 100%;
+        position: fixed; /* Fixed position to keep the navbar static */
+        top: 0; /* Stick the navbar to the top */
+        z-index: 1000; /* Ensure the navbar appears on top of other elements */
+        background-color: #333;
+        color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar {
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .navbar ul li {
+        margin-right: 20px;
+      }
+
+      .navbar ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .navbar ul li a:hover {
+        color: #ffd700;
+      }
+
+      main {
+        padding-top: 70px; /* Adjust padding to prevent content from being hidden under the navbar */
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .tutorial {
+        background-color: #fff;
+        padding: 30px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2 {
+        color: #333;
+      }
+
+      h2 {
+        margin-top: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        margin-bottom: 15px;
+      }
+
+      code {
+        background-color: #f8f8f8;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      pre {
+        background-color: #f8f8f8;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./html_tutorial.html">HTML</a></li>
+          <li><a href="#css-tutorial">CSS</a></li>
+          <li><a href="./js_tutorial.html">JavaScript</a></li>
+          <!-- Add other sections in the navbar -->
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="css-tutorial" class="tutorial">
+        <h1>CSS Tutorial</h1>
+
+        <h2>Introduction to CSS</h2>
+        <p>
+          Cascading Style Sheets (CSS) is a style sheet language used for
+          describing the presentation of a document written in HTML or XML. It
+          defines how elements should be displayed on a webpage.
+        </p>
+
+        <h2>Basic CSS Syntax</h2>
+        <p>
+          CSS uses a selector and a declaration block to style HTML elements.
+          Here's an example:
+        </p>
+        <pre>
+        <code>
+          p {
+            color: blue;
+            font-size: 16px;
+          }
+        </code>
+      </pre>
+
+        <h2>CSS Selectors</h2>
+        <p>Some common CSS selectors include:</p>
+        <ul>
+          <li>Type Selectors</li>
+          <li>Class Selectors</li>
+          <li>ID Selectors</li>
+          <li>Descendant Selectors</li>
+          <li>Attribute Selectors</li>
+          <li>Pseudo-classes and Pseudo-elements</li>
+          <!-- Add more selector types -->
+        </ul>
+
+        <h2>Applying CSS</h2>
+        <p>
+          CSS can be applied in different ways: inline, internal, and external.
+          External stylesheets are typically preferred for larger projects for
+          better maintainability.
+        </p>
+
+        <h2>CSS Box Model</h2>
+        <p>
+          The CSS box model describes the design and layout of elements in HTML.
+          It consists of content, padding, border, and margin.
+        </p>
+
+        <h2>Responsive Design with CSS</h2>
+        <p>
+          Using media queries, CSS can create responsive designs that adapt to
+          different screen sizes and devices, providing a better user
+          experience.
+        </p>
+
+        <h2>CSS Flexbox and Grid</h2>
+        <p>
+          Flexbox and Grid are layout models in CSS that enable efficient design
+          and positioning of elements within a container.
+        </p>
+
+        <!-- Additional CSS learning material -->
+      </section>
+      <!-- Add other sections for different topics if needed -->
+    </main>
+
+    <footer>&copy; 2023 JasGiigliBlog</footer>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+/* Define CSS variables */
+:root {
+  --DarkYellow: #fa9702;
+  --DarkPurple: #9702fa;
+}
+
+
+
+
+/* In your CSS file */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #FFD700;
+  }
+
+  50% {
+    box-shadow: 0 0 20px #FFD700;
+  }
+
+  100% {
+    box-shadow: 0 0 10px #FFD700;
+  }
+}
+
+
+
+
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+/* Reset styles */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* ^^^^^^^^^^^^^^^^^^^^^^   Moving nav bar ^^^^^^^^^^^^^^^^^^^^^^^ */
+
+
+.button {
+  background-color: var(--DarkYellow);
+  color: rgb(0, 0, 0);
+  padding: 0.5rem 1rem;
+  border-radius: 10pxs;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+
+}
+
+.button:hover {
+  background-color: var(--DarkPurple);
+  /* Adjusted hover color */
+}
+
+.list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  flex: none;
+  width: 100px;
+  /* Adjust width */
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border: 1px solid var(--DarkYellow);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.3s ease-in-out;
+}
+
+.item:hover {
+  background-color: var(--DarkYellow);
+  /* Adjusted hover color */
+}
+
+.item.active {
+  background-color: var(--DarkPurple);
+  color: white;
+}
+
+
+
+/* Light mode styles */
+body,
+p,
+button,
+a,
+header,
+footer,
+nav,
+.form-input,
+.modal,
+.list-item,
+#specific-element,
+/* Additional elements */
+.sidebar,
+.article,
+.section-title,
+.table,
+.tooltip {
+  /* Define your light mode styles */
+  color: black;
+  /* Adjust the text color for better readability */
+  ;
+  /* Use a light, neutral background color */
+  /* Add any other styles that suit your professional look */
+}
+
+/* Dark mode styles */
+body.dark,
+p.dark,
+button.dark,
+a.dark,
+header.dark,
+
+nav.dark,
+.form-input.dark,
+.modal.dark,
+.list-item.dark,
+#specific-element.dark,
+/* Additional elements */
+.sidebar.dark,
+.article.dark,
+.section-title.dark,
+.table.dark,
+.tooltip.dark {
+  background-color: #000000;
+  /* Darker background for contrast */
+  color: var(--DarkYellow);
+  /* White or a light color for text on the dark background */
+  /* Additional styles specific to dark mode */
+}

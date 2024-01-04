@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Certified - JasGiigliBlog</title>
+    <style>
+      /* Resetting Default Margin and Padding */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body Styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Certificate Styles */
+      .certificate {
+        position: relative;
+        width: 80%;
+        max-width: 600px;
+        padding: 30px;
+        border: 2px solid #333;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin: 20px;
+      }
+
+      .certificate .ribbon {
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(45deg, #ff8c00, #ff00ff);
+        transform: rotate(45deg);
+        z-index: 1;
+      }
+
+      .certificate .content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .certificate h1 {
+        font-size: 2.5em;
+        color: #333;
+      }
+
+      .certificate h2 {
+        font-size: 1.5em;
+      }
+
+      .certificate h3 {
+        font-size: 1.2em;
+      }
+
+      .certificate p {
+        font-size: 1em;
+      }
+
+      .certificate hr {
+        border: none;
+        border-top: 2px solid #333;
+        width: 50%;
+        margin: 20px auto;
+      }
+
+      .certificate .seal {
+        width: 100px;
+        margin-top: 30px;
+      }
+
+      /* Header Styles */
+      header {
+        background: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      header nav ul {
+        list-style: none;
+      }
+
+      header nav ul li {
+        display: inline;
+        margin-right: 20px;
+      }
+
+      header nav ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      /* Main Sections Styles */
+      section {
+        padding: 20px;
+        margin-bottom: 30px;
+        background: #fff;
+      }
+
+      section h2 {
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      /* Footer Styles */
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+      .certificateDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 35px;
+      }
+      /* Apply for Certificate Section */
+      .apply-certificate {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .apply-certificate form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .apply-certificate label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .apply-certificate input[type="text"],
+      .apply-certificate input[type="email"] {
+        width: 250px;
+        padding: 8px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .apply-certificate input[type="submit"] {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .apply-certificate input[type="submit"]:hover {
+        background-color: #555;
+      }
+
+      /* Enroll in a New Course Section */
+      .enroll-course {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .enroll-course ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .enroll-course li {
+        margin-bottom: 10px;
+      }
+
+      .enroll-course a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s ease;
+      }
+
+      .enroll-course a:hover {
+        color: #555;
+      }
+
+      /* Interview Preparation Section */
+      .interview-preparation {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .interview-preparation ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .interview-preparation li {
+        margin-bottom: 10px;
+      }
+
+      .interview-preparation a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s ease;
+      }
+
+      .interview-preparation a:hover {
+        color: #555;
+      }
+
+      /* Online Quiz Test Section */
+      .online-quiz {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .online-quiz p {
+        margin-bottom: 15px;
+      }
+
+      .quiz-link {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .quiz-link:hover {
+        background-color: #555;
+      }
+
+      /* Different Certificates Section */
+      .different-certificates {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .different-certificates ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .different-certificates li {
+        margin-bottom: 10px;
+      }
+    </style>
+    <!-- Link to your CSS file -->
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="getJob.html">Get Job</a></li>
+          <!-- Add more navigation links as needed -->
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Certificate Template -->
+    <div class="certificateDiv">
+      <section class="certificate">
+        <!-- Placeholder for your certificate template -->
+        <!-- Replace this with your certificate template HTML/CSS -->
+        <div class="ribbon"></div>
+        <div class="content">
+          <h1>Certificate of Achievement</h1>
+          <hr />
+          <p>This is to certify that</p>
+          <h2>EN Junaid Ali Shah</h2>
+          <p>has successfully completed the course on</p>
+          <h3>Full-Stack Development</h3>
+          <p>awarded this <strong>1 of January, 2023</strong></p>
+          <img src="./download (1).jpg" alt="Seal" class="seal" />
+        </div>
+      </section>
+    </div>
+    <section>
+      <h1>More Certificate Earn by EN Junaid Ali Shah</h1>
+      <a href="./sass.html"
+        ><button
+          style="
+            background-color: black;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            padding: 10px;
+            margin: 10px;
+          "
+        >
+          Show Certificates
+        </button></a
+      >
+    </section>
+    <section class="apply-certificate" style="border: 2px solid violet">
+      <div style="text-align: center">
+        <h2>Apply for Certificate</h2>
+        <p>To apply for a certificate, please fill out the form below:</p>
+      </div>
+      <form action="/submit_certificate" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+        <label for="course">Course Name:</label>
+        <input type="text" id="course" name="course" required /><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+    <section class="enroll-course">
+      <h2>Enroll in a New Course</h2>
+      <p>
+        Explore our available courses and enroll today to enhance your skills:
+      </p>
+      <ul>
+        <li><a href="/courses/web-development">Web Development Course</a></li>
+        <li><a href="/courses/data-science">Data Science Course</a></li>
+        <li>
+          <a href="/courses/mobile-apps">Mobile Apps Development Course</a>
+        </li>
+        <!-- Add more course links as needed -->
+      </ul>
+    </section>
+    <section class="interview-preparation">
+      <h2>Interview Preparation</h2>
+      <p>Prepare for your job interviews with these helpful resources:</p>
+      <ul>
+        <li><a href="/interview-tips">Top 10 Interview Tips</a></li>
+        <li><a href="/coding-practice">Coding Practice Exercises</a></li>
+        <li><a href="/mock-interviews">Mock Interview Sessions</a></li>
+        <!-- Add more interview preparation resources as needed -->
+      </ul>
+    </section>
+    <section class="online-quiz">
+      <h2>Online Quiz Test</h2>
+      <p>Complete the online quiz to demonstrate your knowledge:</p>
+      <p>Note: Online quiz test is mandatory for obtaining a certificate.</p>
+      <a href="./getCertified.html" class="quiz-link">Start Quiz</a>
+    </section>
+    <section class="different-certificates">
+      <h2>Different Certificates</h2>
+      <p>Explore our range of certificates in various fields:</p>
+      <ul>
+        <li>Web Development Certificate</li>
+        <li>Data Science Certificate</li>
+        <li>Mobile Apps Development Certificate</li>
+        <!-- Add more certificate details as needed -->
+      </ul>
+    </section>
+  </body>
+</html>

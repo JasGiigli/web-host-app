@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+    <style>
+      :root {
+        --DarkYellow: hsl(41, 98%, 50%);
+        --DarkPurple: #8803fc;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 25%; /* Set the width as needed */
+        overflow-y: auto; /* Enable vertical scrollbar if content exceeds height */
+        /* Additional styling for the sidebar */
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+
+      /* Adjust main content to leave space for the sidebar */
+      main {
+        margin-left: 25%; /* Same width as the sidebar */
+        /* Other styles for the main content */
+        /* ... */
+      }
+      .sidebar {
+        display: none; /* Initially hide sidebar for smaller screens */
+      }
+      @media (min-width: 769px) {
+        .sidebar {
+          display: block; /* Show sidebar for larger screens */
+          width: 25%; /* Adjust width as desired for larger screens */
+        }
+      }
+      .scroll-to-top-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none; /* Hide initially */
+        font-size: 15px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 50%;
+        background-color: var(--DarkYellow); /* Button color */
+        color: #fff;
+        cursor: pointer;
+        text-align: center;
+        line-height: 40px; /* Center text vertically */
+        z-index: 999; /* Ensure it's above other content */
+      }
+
+      .scroll-to-top-btn:hover {
+        background-color: var(--DarkPurple); /* Change hover color as needed */
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-slate-950 text-white py-4 font-bold text-2xl">
+      <ul class="list-none space-x-4 flex items-center justify-center">
+        <li>
+          <a
+            href="./js_tutorial.html"
+            class="hover:text-blue-600 transition duration-300 ease-in-out"
+            >Back</a
+          >
+        </li>
+        <li>
+          <a
+            href="./index.html"
+            class="hover:text-blue-600 transition duration-300 ease-in-out"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="./html_tutorial.html"
+            class="hover:text-blue-600 transition duration-300 ease-in-out"
+            >HTML</a
+          >
+        </li>
+        <li>
+          <a
+            href="./css_tutorial.html"
+            class="hover:text-blue-600 transition duration-300 ease-in-out"
+            >CSS</a
+          >
+        </li>
+      </ul>
+    </header>
+    <div class="flex p-5 leading-8">
+      <button class="hamburger-btn">☰</button>
+      <!-- Sidebar -->
+      <div id="sidebar" class="sidebar bg-gray-200 w-1/4 p-4">
+        <h2 class="font-bold text-2xl">JS Objects</h2>
+        <ul id="courseList">
+          <li>
+            <a href="#introObjects" class="block font-bold mt-4"
+              >Introduction</a
+            >
+          </li>
+          <li>
+            <a href="#creatingObjects" class="font-bold mb-3 mt-3"
+              >Creating Objects</a
+            >
+            <ul>
+              <li>
+                <a
+                  href="#objectLiterals
+                          "
+                  >Object Literals
+                </a>
+              </li>
+              <li>
+                <a href="#creatingObjectswithnew">Creating Objects with new</a>
+              </li>
+              <li><a href="#objectsDotCreate">Object.create() </a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#queryingAndSettingProperties" class="font-bold mb-3 mt-3"
+              >Querying and Setting Properties</a
+            >
+            <ul>
+              <li>
+                <a href="#objectsAsAssociativeArrays"
+                  >Objects As Associative Arrays</a
+                >
+              </li>
+              <li>
+                <a href="#propertyAccessErrors">Property Access Errors</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#deletingProperties" class="font-bold mb-3 mt-3">
+              Deleting Properties</a
+            >
+          </li>
+          <li>
+            <a href="#estingProperties" class="font-bold mb-3 mt-3">
+              Testing Properties</a
+            >
+          </li>
+          <li>
+            <a href="#enumeratingProperties" class="font-bold mb-3 mt-3"
+              >Enumerating Properties</a
+            >
+          </li>
+          <li>
+            <a href="#extendingObjects" class="font-bold mb-3 mt-3"
+              >Extending Objects</a
+            >
+          </li>
+          <li>
+            <a href="#serializingObjects" class="font-bold mb-3 mt-3"
+              >Serializing Objects</a
+            >
+          </li>
+          <li>
+            <a href="#objectMethods" class="font-bold mb-3 mt-3"
+              >Object Methods</a
+            >
+          </li>
+          <li>
+            <a href="#extendedObjectLiteralSyntax" class="font-bold mb-3 mt-3"
+              >Extended Object Literal Syntax</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const hamburgerBtn = document.querySelector(".hamburger-btn");
+      const sidebar = document.querySelector(".sidebar");
+      const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+      // Toggle sidebar visibility on hamburger button click for smaller screens
+      hamburgerBtn.addEventListener("click", (event) => {
+        event.stopPropagation();
+        if (mediaQuery.matches) {
+          sidebar.style.display =
+            sidebar.style.display === "none" ? "block" : "none";
+          sidebar.style.width = sidebar.style.display === "none" ? "0" : "60%"; // Adjust width for smaller screens when toggling
+        }
+      });
+
+      // Hide sidebar when clicking outside of it for smaller screens
+      document.addEventListener("click", (event) => {
+        const isClickOutsideSidebar =
+          !sidebar.contains(event.target) &&
+          !event.target.closest(".hamburger-btn");
+        if (mediaQuery.matches && isClickOutsideSidebar) {
+          sidebar.style.display = "none";
+        }
+      });
+
+      const scrollToTopBtn = document.querySelector(".scroll-to-top-btn");
+
+      // Scroll to top function
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth", // Smooth scroll behavior
+        });
+      });
+
+      // Show or hide scroll to top button based on scroll position
+      window.addEventListener("scroll", () => {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      });
+    });
+  </script>
+</html>

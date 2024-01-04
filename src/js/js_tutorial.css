@@ -1,0 +1,188 @@
+:root {
+  --DarkYellow: hsl(41, 98%, 50%);
+  --DarkPurple: #8803fc;
+}
+
+/* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+
+
+
+/* Adjust other styles as needed */
+
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li a {
+  display: block;
+  padding: 1px;
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar li a:hover {
+  background-color: #000000;
+  color: white;
+  border-radius: 2px;
+}
+
+
+
+
+
+
+
+/* Common styles for headings and paragraphs */
+h1, h2, h3, p {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+/* Paragraph styles */
+p {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+/* Lists styles */
+ol, ul {
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  font-size: 1.4rem;
+  background-color: var(--DarkYellow);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--DarkPurple);
+}
+
+/* Link styles */
+a {
+  color: var(--DarkPurple);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 20%;
+  height: 100vh; /* Set sidebar height to full viewport height */
+  background-color: #f0f0f0;
+  padding: 10px;
+  position: fixed;
+  top: 0; /* Position sidebar at the top of the viewport */
+  left: 0; /* Align sidebar to the left */
+  overflow-y: auto; /* Allow sidebar content to scroll */
+  display: block
+}
+
+.main-content {
+  width: 75%;
+  padding: 10px;
+  margin-left: 20%; /* Adjust margin to accommodate sidebar */
+}
+
+.hamburger-btn {
+  display: none; /* Hide the button on larger screens */
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none; /* Hide sidebar on mobile */
+  }
+
+  .main-content {
+    width: 100%; /* Take full width on mobile */
+    margin-left: 0; /* No margin for the main content on mobile */
+  }
+
+  /* Show/hide sidebar button styles for mobile */
+  .hamburger-btn {
+    display: block; /* Show the button on mobile */
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--DarkPurple);
+  }
+  
+  .hamburger-btn:hover {
+    color: var(--DarkYellow);
+    /* Adjust any other hover styles here */
+  }
+  
+}
+
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Hide initially */
+  font-size: 24px;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--DarkYellow); /* Button color */
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px; /* Center text vertically */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+.scroll-to-top-btn:hover {
+  background-color: var(--DarkPurple); /* Change hover color as needed */
+}

@@ -1,0 +1,2610 @@
+<!DOCTYPE html>
+<!-- Starting Working on this website Date:10 October 2023 -->
+<!-- ************************ || HTML *************************** -->
+<html lang="en">
+<!--  ********************* || HEAD *************************** -->
+
+<head>
+  <style>
+    @keyframes float-up {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes float-down {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(15px);
+      }
+
+
+    }
+
+    .hover\:animate-float:hover:nth-child(1) {
+      animation: float-up 0.5s infinite;
+    }
+
+    .hover\:animate-float:hover:nth-child(2) {
+      animation: float-down 0.5s infinite;
+    }
+  </style>
+  <!-- ******************* || EXTERNAl-TAILWIND CSS ****************** -->
+  <link rel="stylesheet" href="../dist/output.css" />
+  <!-- ******************* || EXTERNAl-STYLES ****************** -->
+  <link rel="stylesheet" href="./index.css" />
+
+  <!-- Unicode Encoding -->
+  <meta charset="UTF-8" />
+  <!-- Set the screen size -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Descriptions of my Website -->
+  <meta name="description"
+    content="Welcome to JasGiigli Tech - your hub for mastering programming and code learning in HTML, CSS, JavaScript, C++, Python, Node.js, React, Next.js, Angular, and more. Dive into comprehensive tutorials, in-depth resources, and practical insights to elevate your coding skills and explore the world of software development." />
+
+  <!-- Keywords of my Website -->
+  <meta name="keywords"
+    content="HTML, CSS, JavaScript, C++, Python, Node.js, React, Next.js, Angular, programming, code learning, software development, tutorials, coding languages, web development, tech education" />
+
+  <!-- Author Name -->
+  <meta name="author" content="JasGiigli" />
+  <!-- This tag tells the engine to show in the search index -->
+  <meta name="robots" content="index, follow" />
+  <!-- This is the Open Graph meta tag for setting the title that appears when your website is shared on social media. -->
+  <meta property="og:title" content="JasGiigli Tech - Master Programming and Code Learning in Various Technologies" />
+
+  <!-- The following Open Graph meta tag provides a description for shared content on social media. -->
+
+  <meta property="og:description"
+    content="Elevate your coding skills with JasGiigli Tech! Dive into comprehensive tutorials, practical insights, and resources covering HTML, CSS, JavaScript, C++, Python, Node.js, React, Next.js, Angular, and more." />
+
+  <!-- Website Feature image -->
+  <meta property="og:image" content="https://jasgiiglitech.000webhostapp.com/jas.jpg" />
+  <!-- Website main URL -->
+  <meta property="og:url" content="https://jasgiiglitech.000webhostapp.com/" />
+
+  <!--...........................Twitter Sharing...............-->
+
+  <!-- Twitter Card Type: Specifies the type of Twitter card to use (summary). -->
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Twitter Site Username: The Twitter username associated with the website (@JasGiigli). -->
+  <meta name="twitter:site" content="@YourTwitterHandle" />
+  <!-- Replace with your actual Twitter handle -->
+
+  <!-- Twitter Card Title: The title to be displayed when the link is shared on Twitter. -->
+  <meta name="twitter:title" content="JasGiigli Tech - Master Programming and Code Learning in Various Technologies" />
+
+  <!-- Twitter Card Description: A brief description for shared content on Twitter. -->
+  <meta name="twitter:description"
+    content="Elevate your coding skills with JasGiigli Tech! Dive into comprehensive tutorials, practical insights, and resources covering HTML, CSS, JavaScript, C++, Python, Node.js, React, Next.js, Angular, and more." />
+
+  <!-- Twitter Card Image: The image to be displayed alongside the shared link on Twitter. -->
+  <meta name="twitter:image" content="https://jasgiiglitech.000webhostapp.com/jas.jpg" />
+
+  <!--....................LinkedIn Sharing............................-->
+
+  <!-- LinkedIn Card Type: Specifies the type of LinkedIn card to use (summary_large_image). -->
+  <meta property="og:type" content="website" />
+
+  <!-- LinkedIn Site Name: The name associated with the website (Your Website Name). -->
+  <meta property="og:site_name" content="JasGiigli Tech" />
+
+  <!-- LinkedIn Title: The title to be displayed when the link is shared on LinkedIn. -->
+  <meta property="og:title" content="JasGiigli Tech - Master Programming and Code Learning in Various Technologies" />
+
+  <!-- LinkedIn Description: A brief description for shared content on LinkedIn. -->
+  <meta property="og:description"
+    content="Elevate your coding skills with JasGiigli Tech! Dive into comprehensive tutorials, practical insights, and resources covering HTML, CSS, JavaScript, C++, Python, Node.js, React, Next.js, Angular, and more." />
+
+  <!-- LinkedIn URL: The URL of the page you're sharing. -->
+  <meta property="og:url" content="https://jasgiiglitech.000webhostapp.com" />
+  <!-- Replace with your actual website URL -->
+
+  <!-- LinkedIn Image: The image to be displayed alongside the shared link on LinkedIn. -->
+  <meta property="og:image" content="https://jasgiiglitech.000webhostapp.com/jas.jpg" />
+
+  <!-- LinkedIn Image Width and Height: Specify the dimensions of the image. -->
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Favicon (32x32 pixels) -->
+  <link rel="icon" type="image/png" href="./assets/favicon.jpg" />
+
+  <!-- Title -->
+  <title>JasGiigli Tech</title>
+
+  <!--......................................Matoma Visitor Tracker...................................-->
+  <script>
+    // Matomo Tracking Script
+    var _paq = (window._paq = window._paq || []);
+
+    // Note: Tracker methods like "setCustomDimension" should be called before "trackPageView"
+
+    // Set the document title for tracking (includes domain and title)
+    _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+
+    // Configure the cookie domain to track all subdomains
+    _paq.push(["setCookieDomain", "*.jasgiiglitech.000webhostapp.com"]);
+
+    // Set the domains to be tracked (in this case, the same domain)
+    _paq.push(["setDomains", ["*.jasgiiglitech.000webhostapp.com"]]);
+
+    // Respect "Do Not Track" if it's enabled in the user's browser
+    _paq.push(["setDoNotTrack", true]);
+
+    // Track the current page view
+    _paq.push(["trackPageView"]);
+
+    // Enable tracking of user interactions with links
+    _paq.push(["enableLinkTracking"]);
+
+    // Initialize the Matomo tracking
+    (function() {
+      var u = "https://jasgiiglitech.matomo.cloud/";
+      _paq.push(["setTrackerUrl", u + "matomo.php"]);
+      _paq.push(["setSiteId", "1"]);
+      var d = document,
+        g = d.createElement("script"),
+        s = d.getElementsByTagName("script")[0];
+      g.async = true;
+      g.src = "//cdn.matomo.cloud/jasgiiglitech.matomo.cloud/matomo.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+  <!--.........................Matoma Ended...............................-->
+
+  <!--.....................Clicky Visitor Trackor..........................-->
+  <!-- Track Website Analytics with Clicky -->
+  <a title="Web Analytics" href="https://clicky.com/101429803" style="display: none">
+    <img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" />
+  </a>
+
+  <!-- Include Clicky Analytics Script (Asynchronous) -->
+  <script async src="//static.getclicky.com/101429803.js"></script>
+
+  <!--.............................Clicky Ended..............................................................-->
+</head>
+
+<!-- ********************** || BODY ************************** -->
+
+<body>
+  <!-- ******************** || HEADER *********************** -->
+  <header class="flex justify-evenly items-center py-1 shadow-md bg-slate-900">
+
+    <!-- <a href="./index.html"
+      class="text-lg font-bold text-DarkYellow hover:text-DarkPurple transition duration-300 transform hover:scale-105 hover:underline hover:shadow-lg rounded-md p-2 border-2 border-DarkYellow hover:border-DarkPurple">
+      JasGiigli Tech
+    </a> -->
+    <a href="./index.html" class="text-lg text-center hover:transform hover:scale-105">
+      <span class="block font-bold text-white transition duration-300 hover:animate-float">JasGiigli</span>
+      <span class="block font-bold text-white transition duration-300 hover:animate-float">Tech</span>
+    </a>
+
+
+
+    <a href="#"
+      class="flex items-center text-DarkYellow transition-colors duration-300 transform hover:text-DarkPurple hover:scale-105">
+      <svg class="h-6 w-6 fill-current mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <title>Sign Up</title>
+        <path
+          d="M5 3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H8V3a1 1 0 0 0-2 0zm0 2v2h8V5H5zm0 4v6h10V9H5z" />
+      </svg>
+      <span class="link-text">Sign Up</span>
+    </a>
+
+
+
+    <a href="#" class="flex items-center  text-green-700 hover:text-pink-700">
+      <svg class="h-6 w-6 fill-current mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <title>Log In</title>
+        <path
+          d="M8 2a2 2 0 0 0-2 2v2H5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3h-1V4a2 2 0 0 0-2-2H8zm2 4h2v2h-2V6zM8 8h4v2H8V8z" />
+      </svg>
+      <span class="link-text">Log In</span>
+    </a>
+
+    <a href="./getJob.html" class="flex items-center  text-blue-500 hover:text-violet-800">
+      <svg class="h-6 w-6 fill-current mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <title>Get Job</title>
+        <path fill-rule="evenodd"
+          d="M15 5a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v1H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-1V5zm-5 2a3 3 0 0 1 3 3h-2a1 1 0 1 0-2 0H7a3 3 0 0 1 3-3zM5 16V8h10v8H5z"
+          clip-rule="evenodd"></path>
+      </svg>
+      <span class="link-text">Get Job</span>
+    </a>
+
+    <a href="./getCertified.html" class="flex items-center  text-red-600 hover:text-DarkYellow">
+      <svg class="h-6 w-6 fill-current mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <title>Get Certified</title>
+        <path fill-rule="evenodd"
+          d="M3 3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h6v-2H3V5h14v3h2V5a2 2 0 0 0-2-2H3zm10 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm2 2a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"
+          clip-rule="evenodd"></path>
+      </svg>
+      <span class="link-text">Get Certified</span>
+    </a>
+
+    <a href="#" onclick="toggleDarkMode()" class="flex items-center  text-white hover:text-DarkYellow">
+      <svg class="h-6 w-6 fill-current mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM8.485 8.485a1 1 0 1 1 1.414-1.414l2.122 2.122a1 1 0 0 1 0 1.414l-2.122 2.122a1 1 0 1 1-1.414-1.414l1.268-1.268-1.268-1.268z"
+          clip-rule="evenodd"></path>
+      </svg>
+      <span class="link-text">Dark Mood</span>
+    </a>
+  </header>
+
+
+
+  <!-- ^ MOVING NAVBAR -->
+  <div class="header bg-gray-300 border-b border-gray-300  h-16">
+    <ul class="list flex items-center space-x-2" id="languageList">
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        HTML</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        CSS</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        JavaScript</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        R</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Python</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Java</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Ruby</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        C#</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        T-Script</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Swift</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        PHP</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Kotlin</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Go</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Scala</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        C++</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Obj-C</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Rust</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Dart</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Lua</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Perl</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Haskell</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Shell</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Vue.js</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Angular</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Re-Nat</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Flutter</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        Redux</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        GraphQL</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        MongoDB</li>
+      <li
+        class="item text-gray-700 cursor-pointer transition-transform duration-300 ease-in-out hover:text-darkorange transform hover:scale-110">
+        MySQL</li>
+      <li class="item text-gray-700 cursor-pointer">SQLite</li>
+      <li class="item text-gray-700 cursor-pointer">Firebase</li>
+      <li class="item text-gray-700 cursor-pointer">Elixir</li>
+      <li class="item text-gray-700 cursor-pointer">Erlang</li>
+      <li class="item text-gray-700 cursor-pointer">Clojure</li>
+      <li class="item text-gray-700 cursor-pointer">F#</li>
+      <li class="item text-gray-700 cursor-pointer">Groovy</li>
+      <li class="item text-gray-700 cursor-pointer">Haskell</li>
+      <li class="item text-gray-700 cursor-pointer">Julia</li>
+      <li class="item text-gray-700 cursor-pointer">Lisp</li>
+      <li class="item text-gray-700 cursor-pointer">Scheme</li>
+      <li class="item text-gray-700 cursor-pointer">Racket</li>
+      <li class="item text-gray-700 cursor-pointer">Ada</li>
+      <li class="item text-gray-700 cursor-pointer">Kotlin</li>
+      <li class="item text-gray-700 cursor-pointer">Scala</li>
+      <li class="item text-gray-700 cursor-pointer">Docker</li>
+      <li class="item text-gray-700 cursor-pointer">Kubernete</li>
+      <li class="item text-gray-700 cursor-pointer">Jenkins</li>
+      <li class="item text-gray-700 cursor-pointer">Terraform</li>
+      <li class="item text-gray-700 cursor-pointer">Rust</li>
+      <li class="item text-gray-700 cursor-pointer">Lua</li>
+      <li class="item text-gray-700 cursor-pointer">Haskell</li>
+      <li class="item text-gray-700 cursor-pointer">Julia</li>
+      <li class="item text-gray-700 cursor-pointer">Dart</li>
+      <li class="item text-gray-700 cursor-pointer">Elixir</li>
+      <li class="item text-gray-700 cursor-pointer">Erlang</li>
+      <li class="item text-gray-700 cursor-pointer">Clojure</li>
+      <li class="item text-gray-700 cursor-pointer">F#</li>
+      <li class="item text-gray-700 cursor-pointer">Groovy</li>
+      <li class="item text-gray-700 cursor-pointer">Swift</li>
+      <li class="item text-gray-700 cursor-pointer">Kotlin</li>
+      <li class="item text-gray-700 cursor-pointer">Scala</li>
+      <li class="item text-gray-700 cursor-pointer">R</li>
+      <li class="item text-gray-700 cursor-pointer">Perl</li>
+      <li class="item text-gray-700 cursor-pointer">Lua</li>
+      <li class="item text-gray-700 cursor-pointer">COBOL</li>
+      <li class="item text-gray-700 cursor-pointer">Fortran</li>
+      <li class="item text-gray-700 cursor-pointer">Assembly</li>
+      <li class="item text-gray-700 cursor-pointer">Lisp</li>
+      <li class="item text-gray-700 cursor-pointer">Scheme</li>
+      <li class="item text-gray-700 cursor-pointer">Django</li>
+      <li class="item text-gray-700 cursor-pointer">Flask</li>
+      <li class="item text-gray-700 cursor-pointer">Express.js</li>
+      <li class="item text-gray-700 cursor-pointer">Meteor</li>
+      <li class="item text-gray-700 cursor-pointer">Hadoop</li>
+      <li class="item text-gray-700 cursor-pointer">Spark</li>
+      <li class="item text-gray-700 cursor-pointer">D3.js</li>
+      <li class="item text-gray-700 cursor-pointer">Three.js</li>
+      <li class="item text-gray-700 cursor-pointer">Pandas</li>
+      <li class="item text-gray-700 cursor-pointer">NumPy</li>
+      <li class="item text-gray-700 cursor-pointer">TensorFlow</li>
+      <li class="item text-gray-700 cursor-pointer">PyTorch</li>
+      <li class="item text-gray-700 cursor-pointer">React</li>
+      <li class="item text-gray-700 cursor-pointer">Vue.js</li>
+      <li class="item text-gray-700 cursor-pointer">Angular</li>
+      <li class="item text-gray-700 cursor-pointer">Ember.js</li>
+      <li class="item text-gray-700 cursor-pointer">Backbone.js</li>
+      <li class="item text-gray-700 cursor-pointer">Svelte</li>
+      <li class="item text-gray-700 cursor-pointer">Redux</li>
+      <li class="item text-gray-700 cursor-pointer">MobX</li>
+      <li class="item text-gray-700 cursor-pointer">jQuery</li>
+      <li class="item text-gray-700 cursor-pointer">Bootstrap</li>
+      <li class="item text-gray-700 cursor-pointer">Tailwind</li>
+      <li class="item text-gray-700 cursor-pointer">Material</li>
+      <li class="item text-gray-700 cursor-pointer">Semantic</li>
+      <li class="item text-gray-700 cursor-pointer">Koa</li>
+      <li class="item text-gray-700 cursor-pointer">NestJS</li>
+      <li class="item text-gray-700 cursor-pointer">Django</li>
+      <li class="item text-gray-700 cursor-pointer">Flask</li>
+      <li class="item text-gray-700 cursor-pointer">Spring-B</li>
+      <li class="item text-gray-700 cursor-pointer">Laravel</li>
+      <li class="item text-gray-700 cursor-pointer">CodeIgniter</li>
+      <li class="item text-gray-700 cursor-pointer">Zend </li>
+      <li class="item text-gray-700 cursor-pointer">Symfony</li>
+      <li class="item text-gray-700 cursor-pointer">ASP.NET</li>
+      <li class="item text-gray-700 cursor-pointer">Express.js</li>
+      <li class="item text-gray-700 cursor-pointer">Koa</li>
+      <li class="item text-gray-700 cursor-pointer">NestJS</li>
+      <li class="item text-gray-700 cursor-pointer">Spring-</li>
+      <li class="item text-gray-700 cursor-pointer">Flask</li>
+      <li class="item text-gray-700 cursor-pointer">Django</li>
+      <li class="item text-gray-700 cursor-pointer">Hibernate</li>
+      <li class="item text-gray-700 cursor-pointer">Redux-S</li>
+      <li class="item text-gray-700 cursor-pointer">Vuex</li>
+      <li class="item text-gray-700 cursor-pointer">RxJS</li>
+      <li class="item text-gray-700 cursor-pointer">ApolloL</li>
+      <li class="item text-gray-700 cursor-pointer">Webpack</li>
+      <li class="item text-gray-700 cursor-pointer">Babel</li>
+      <li class="item text-gray-700 cursor-pointer">Gatsby</li>
+      <li class="item text-gray-700 cursor-pointer">Next.js</li>
+      <li class="item text-gray-700 cursor-pointer">Sass</li>
+      <li class="item text-gray-700 cursor-pointer">Less</li>
+      <li class="item text-gray-700 cursor-pointer">Stylus</li>
+      <li class="item text-gray-700 cursor-pointer">PostCSS</li>
+      <li class="item text-gray-700 cursor-pointer">Jest</li>
+      <li class="item text-gray-700 cursor-pointer">Mocha</li>
+      <li class="item text-gray-700 cursor-pointer">Chai</li>
+      <li class="item text-gray-700 cursor-pointer">Cypress</li>
+      <li class="item text-gray-700 cursor-pointer">Selenium</li>
+      <li class="item text-gray-700 cursor-pointer">Jenkins</li>
+      <li class="item text-gray-700 cursor-pointer">Travis CI</li>
+      <li class="item text-gray-700 cursor-pointer">CircleCI</li>
+      <li class="item text-gray-700 cursor-pointer">GitLab CI/CD</li>
+      <li class="item text-gray-700 cursor-pointer">AWS</li>
+      <li class="item text-gray-700 cursor-pointer">Azure</li>
+      <li class="item text-gray-700 cursor-pointer">Heroku</li>
+      <li class="item text-gray-700 cursor-pointer">GraphQL</li>
+      <li class="item text-gray-700 cursor-pointer">Deno</li>
+      <li class="item text-gray-700 cursor-pointer">Vercel</li>
+      <li class="item text-gray-700 cursor-pointer">Netlify</li>
+      <li class="item text-gray-700 cursor-pointer">FastAPI</li>
+      <li class="item text-gray-700 cursor-pointer">Kubernetes</li>
+      <li class="item text-gray-700 cursor-pointer">Istio</li>
+      <li class="item text-gray-700 cursor-pointer">Docker Swarm</li>
+      <li class="item text-gray-700 cursor-pointer">Redis</li>
+      <li class="item text-gray-700 cursor-pointer">Elasticsearch</li>
+      <li class="item text-gray-700 cursor-pointer">Prometheus</li>
+      <li class="item text-gray-700 cursor-pointer">Kibana</li>
+      <li class="item text-gray-700 cursor-pointer">RabbitMQ</li>
+      <li class="item text-gray-700 cursor-pointer">Kafka</li>
+      <li class="item text-gray-700 cursor-pointer">OpenShift</li>
+      <li class="item text-gray-700 cursor-pointer">Web3.js</li>
+      <li class="item text-gray-700 cursor-pointer">Solidity</li>
+      <li class="item text-gray-700 cursor-pointer">NFTs </li>
+      <li class="item text-gray-700 cursor-pointer">DeFi </li>
+      <li class="item text-gray-700 cursor-pointer">Rust</li>
+      <li class="item text-gray-700 cursor-pointer">Deno</li>
+      <li class="item text-gray-700 cursor-pointer">Kubernetes</li>
+      <li class="item text-gray-700 cursor-pointer">GraphQL</li>
+      <li class="item text-gray-700 cursor-pointer">Serverless</li>
+      <li class="item text-gray-700 cursor-pointer">(AI)</li>
+      <li class="item text-gray-700 cursor-pointer">(ML)</li>
+      <li class="item text-gray-700 cursor-pointer"> (NLP)</li>
+      <li class="item text-gray-700 cursor-pointer"> (RPA)</li>
+      <li class="item text-gray-700 cursor-pointer">Cybersecurity</li>
+      <li class="item text-gray-700 cursor-pointer">Blockchain </li>
+      <li class="item text-gray-700 cursor-pointer">Cryptocurrency</li>
+      <li class="item text-gray-700 cursor-pointer">(IoT)</li>
+      <li class="item text-gray-700 cursor-pointer"> (AR)</li>
+      <li class="item text-gray-700 cursor-pointer"> (VR)</li>
+      <li class="item text-gray-700 cursor-pointer">Edge-C</li>
+    </ul>
+    <button class="button btn-1 border-gray-400 text-gray-600 cursor-pointer float-left border-2"
+      id="leftButton">&lt;</button>
+    <button class="button btn-2 border-gray-400 text-gray-600 cursor-pointer float-right border-2"
+      id="rightButton">&gt;</button>
+  </div>
+
+
+
+
+
+
+  <!-- ******************** || MAIN *********************** -->
+  <main class="text-center flex flex-col items-center">
+    <!--  ^^^^^^^^^^^^^^^^^^^^^^ HERO SECTION ^^^^^^^^^^^^^ -->
+
+    <section class="container mt-16 flex flex-col items-center">
+
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-semibold text-gray-800">Unlock the Power of JavaScript</h2>
+        <p class="text-lg text-gray-600 mt-3">Enroll in our premium JavaScript course and elevate your coding skills.
+        </p>
+        <a href="./js/js_tutorial.html"
+          class="inline-block mt-4 px-6 py-3 bg-DarkYellow text-white font-bold text-lg rounded-md hover:bg-DarkPurple transition duration-300">Explore
+          JavaScript Course</a>
+      </div>
+
+
+      <div class="text-center mb-6">
+        <p class="text-5xl text-yellow-600 mt-2 font-bold hover:underline">
+          Learn To Code
+        </p>
+      </div>
+
+
+
+
+      <div class="py-12 bg-white w-full">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold text-gray-900">
+              Explore Cutting-Edge Global Tutorials
+            </h2>
+            <p class="text-lg text-gray-600 mt-2">
+              Elevate your expertise with our comprehensive range of tutorials.
+            </p>
+          </div>
+          <div class="flex justify-center items-center">
+            <input type="search" id="searchInput"
+              class="border border-gray-300 shadow-md focus:shadow-lg focus:border-gray-500 rounded-l-md px-4 py-3 outline-none w-3/4 md:w-2/4 text-gray-700 placeholder-gray-500"
+              placeholder="Search for tutorials..." />
+            <button id="searchButton"
+              class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-r-md px-6 py-3 focus:outline-none transition duration-300 shadow-md">
+              Start Exploring
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- !!!!!!!!! Courses Cards !!!!!!!!!!!!-->
+    <div class="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+      <div id="coursesList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Course Cards -->
+        <div class="card" data-language="html">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">HTML Fundamentals</h3>
+
+              <p class="text-gray-700">
+                Master the essentials of HTML from scratch.
+              </p>
+            </div>
+
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-language="css">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">CSS Basics</h3>
+              <p class="text-gray-700">
+                Learn the fundamentals of CSS for styling web pages.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-language="javascript">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                JavaScript Essentials
+              </h3>
+              <p class="text-gray-700">
+                Explore essential concepts and practices in JavaScript.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-language="react">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                React.js Fundamentals
+              </h3>
+              <p class="text-gray-700">
+                Learn the foundational concepts of React.js.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-language="python">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Python Basics</h3>
+              <p class="text-gray-700">
+                Dive into the basics of Python programming language.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-language="nodejs">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Node.js Advanced</h3>
+              <p class="text-gray-700">
+                Explore advanced concepts of Node.js for backend development.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 1 -->
+        <div class="card" data-language="java">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Java Programming</h3>
+              <p class="text-gray-700">
+                Dive into the world of Java programming language.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" data-language="angular">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Angular Framework</h3>
+              <p class="text-gray-700">
+                Explore the Angular framework for modern web development.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" data-language="vuejs">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Vue.js Essentials</h3>
+              <p class="text-gray-700">
+                Learn essential concepts and practices in Vue.js.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" data-language="ruby">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Ruby Programming</h3>
+              <p class="text-gray-700">
+                Get started with the Ruby programming language.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card" data-language="csharp">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">C# Fundamentals</h3>
+              <p class="text-gray-700">
+                Learn the fundamental concepts of C# programming.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card" data-language="php">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">PHP Basics</h3>
+              <p class="text-gray-700">
+                Get started with the basics of PHP programming language.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card" data-language="typescript">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">TypeScript Basics</h3>
+              <p class="text-gray-700">
+                Dive into the basics of TypeScript programming language.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card" data-language="mongodb">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">MongoDB Fundamentals</h3>
+              <p class="text-gray-700">
+                Explore the fundamental concepts of MongoDB for database
+                management.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 1 -->
+        <div class="card" data-language="swift">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Swift Programming</h3>
+              <p class="text-gray-700">
+                Learn the fundamentals of Swift programming language.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" data-language="perl">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Perl Programming</h3>
+              <p class="text-gray-700">
+                Dive into the world of Perl programming language.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" data-language="go">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Go Programming</h3>
+              <p class="text-gray-700">
+                Learn the essentials of Go programming language.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" data-language="rust">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Rust Programming</h3>
+              <p class="text-gray-700">
+                Explore the world of Rust programming language.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card" data-language="kotlin">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Kotlin Basics</h3>
+              <p class="text-gray-700">
+                Get started with the basics of Kotlin programming language.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card" data-language="scala">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Scala Programming</h3>
+              <p class="text-gray-700">
+                Explore the world of Scala programming language.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card" data-language="elixir">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Elixir Programming</h3>
+              <p class="text-gray-700">
+                Dive into the world of Elixir programming language.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card" data-language="lua">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Lua Programming</h3>
+              <p class="text-gray-700">
+                Get started with the basics of Lua programming language.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="card" data-language="haskell">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Haskell Programming</h3>
+              <p class="text-gray-700">
+                Dive into the world of Haskell programming language.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- React Native -->
+        <div class="card" data-language="react-native">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">React Native</h3>
+              <p class="text-gray-700">
+                Dive into mobile app development with React Native.
+              </p>
+            </div>
+            <div class="bg-gray-200 p-4">
+              <button
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 focus:outline-none">
+                Enroll now
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-language="flask">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Flask Library</h3>
+              <p class="text-gray-700">
+                Build web applications effortlessly with the lightweight Flask
+                framework.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: December 30, 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="machine-learning">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Machine Learning</h3>
+              <p class="text-gray-700">
+                Dive into the world of AI with Machine Learning algorithms and
+                models.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="blockchain">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Blockchain</h3>
+              <p class="text-gray-700">
+                Explore decentralized solutions and secure transactions with
+                Blockchain technology.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="quantum-computing">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Quantum Computing</h3>
+              <p class="text-gray-700">
+                Enter the realm of quantum mechanics in computing for
+                unparalleled processing power.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="cybersecurity">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Cybersecurity</h3>
+              <p class="text-gray-700">
+                Safeguard systems and data from cyber threats with robust
+                cybersecurity measures.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="iot">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                Internet of Things (IoT)
+              </h3>
+              <p class="text-gray-700">
+                Connect devices and enable smart solutions with the Internet
+                of Things.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="ar">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                Augmented Reality (AR)
+              </h3>
+              <p class="text-gray-700">
+                Blend virtual elements into the real world using Augmented
+                Reality technology.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="edge-computing">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Edge Computing</h3>
+              <p class="text-gray-700">
+                Process data closer to its source and enhance real-time
+                applications with Edge Computing.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="devops">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">DevOps</h3>
+              <p class="text-gray-700">
+                Bridge development and operations for efficient and automated
+                software delivery.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="cloud-computing">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Cloud Computing</h3>
+              <p class="text-gray-700">
+                Scale, store, and manage data efficiently with Cloud Computing
+                solutions.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="microservices">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                Microservices Architecture
+              </h3>
+              <p class="text-gray-700">
+                Build scalable and modular applications using Microservices
+                Architecture.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="pwas">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                Progressive Web Apps (PWAs)
+              </h3>
+              <p class="text-gray-700">
+                Deliver app-like experiences with Progressive Web Apps for web
+                users.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="nlp">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                Natural Language Processing (NLP)
+              </h3>
+              <p class="text-gray-700">
+                Understand, interpret, and generate human language using NLP
+                techniques.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tech="serverless">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Serverless Computing</h3>
+              <p class="text-gray-700">
+                Embrace event-driven, scalable applications with Serverless
+                Computing.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="robotics">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Robotics</h3>
+              <p class="text-gray-700">
+                Explore the intersection of hardware and software with
+                Robotics technology.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="5g">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">5G Technology</h3>
+              <p class="text-gray-700">
+                Experience ultra-fast, low-latency connectivity with 5G
+                technology.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="quantum-cryptography">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Quantum Cryptography</h3>
+              <p class="text-gray-700">
+                Secure communications with unbreakable encryption using
+                Quantum Cryptography.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="webassembly">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">WebAssembly (Wasm)</h3>
+              <p class="text-gray-700">
+                Execute high-performance code across different platforms with
+                WebAssembly.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tech="nanotechnology">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Nanotechnology</h3>
+              <p class="text-gray-700">
+                Explore innovation at the nanoscale with Nanotechnology
+                advancements.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="quantum-sensing">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Quantum Sensing</h3>
+              <p class="text-gray-700">
+                Revolutionize measurement and detection using Quantum Sensing
+                techniques.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="smart-cities">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                Smart Cities Technology
+              </h3>
+              <p class="text-gray-700">
+                Transform urban living with interconnected Smart Cities
+                technology.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="gesture-recognition">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Gesture Recognition</h3>
+              <p class="text-gray-700">
+                Enable interactions through gestures with Gesture Recognition
+                technology.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="wearable-tech">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Wearable Technology</h3>
+              <p class="text-gray-700">
+                Integrate tech into everyday life with Wearable Technology
+                devices.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="gesture-interfaces">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                Gesture Controlled Interfaces
+              </h3>
+              <p class="text-gray-700">
+                Interact with technology seamlessly using Gesture Controlled
+                Interfaces.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="spatial-computing">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Spatial Computing</h3>
+              <p class="text-gray-700">
+                Merge digital and physical worlds with Spatial Computing
+                technology.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="bci">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                Brain-Computer Interfaces (BCI)
+              </h3>
+              <p class="text-gray-700">
+                Communicate directly with computers through Brain-Computer
+                Interfaces.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="xr">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                Extended Reality (XR)
+              </h3>
+              <p class="text-gray-700">
+                Immerse users in virtual and augmented experiences using
+                Extended Reality.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="cognitive-computing">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Cognitive Computing</h3>
+              <p class="text-gray-700">
+                Mimic human thought processes and improve decision-making with
+                Cognitive Computing.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="quantum-networking">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Quantum Networking</h3>
+              <p class="text-gray-700">
+                Enable secure communication across vast distances with Quantum
+                Networking.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="graphql">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">GraphQL</h3>
+              <p class="text-gray-700">
+                Fetch and manage data more efficiently with GraphQL query
+                language.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="deno">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Deno</h3>
+              <p class="text-gray-700">
+                A secure runtime for JavaScript and TypeScript built with
+                modern features.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="svelte">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Svelte</h3>
+              <p class="text-gray-700">
+                Build reactive web applications with a lightweight Svelte
+                framework.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="alpinejs">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Alpine.js</h3>
+              <p class="text-gray-700">
+                Enhance interactivity with minimal JavaScript using Alpine.js
+                framework.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="vite">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Vite</h3>
+              <p class="text-gray-700">
+                A fast and modern build tooling for web development with Vue
+                and React.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="tailwindcss">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Tailwind CSS</h3>
+              <p class="text-gray-700">
+                Utilize utility-first CSS framework for building custom
+                designs easily.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="nextjs">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Next.js</h3>
+              <p class="text-gray-700">
+                Build production-ready React applications with the Next.js
+                framework.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="snowpack">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Snowpack</h3>
+              <p class="text-gray-700">
+                A lightning-fast frontend build tool to streamline modern web
+                development.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="remix">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Remix</h3>
+              <p class="text-gray-700">
+                A full-stack web framework for building modern JavaScript
+                applications.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="astro">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Astro</h3>
+              <p class="text-gray-700">
+                A new approach to building websites using faster and lighter
+                rendering.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="remixrun">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Remix Run</h3>
+              <p class="text-gray-700">
+                The all-in-one toolkit for building modern web applications
+                with React.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="solidjs">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">SolidJS</h3>
+              <p class="text-gray-700">
+                A declarative, efficient, and reactive JavaScript library for
+                building user interfaces.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="stencil">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Stencil</h3>
+              <p class="text-gray-700">
+                Build reusable web components for high-performance
+                applications.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="solido">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Solido</h3>
+              <p class="text-gray-700">
+                A lightweight, reactive, and fast framework for modern web
+                development.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="sapper">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Sapper</h3>
+              <p class="text-gray-700">
+                A framework for building high-performance web apps with Svelte
+                and SSR.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="solido-router">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Solido Router</h3>
+              <p class="text-gray-700">
+                A reactive and efficient router for Solido framework
+                applications.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="blitzjs">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Blitz.js</h3>
+              <p class="text-gray-700">
+                A full-stack React framework for building monolithic web
+                applications.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="choo">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Choo</h3>
+              <p class="text-gray-700">
+                A lightweight framework for building sturdy frontend
+                applications.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="stimulus">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Stimulus</h3>
+              <p class="text-gray-700">
+                A modest JavaScript framework that works well with HTML-based
+                applications.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="speljs">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Spel.js</h3>
+              <p class="text-gray-700">
+                A lightweight and performant library for building game-like
+                web applications.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="solid-app-router">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Solid App Router</h3>
+              <p class="text-gray-700">
+                A declarative and efficient router for SolidJS applications.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="hyperapp">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Hyperapp</h3>
+              <p class="text-gray-700">
+                A tiny frontend framework for building web applications with
+                JavaScript.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="markojs">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Marko.js</h3>
+              <p class="text-gray-700">
+                A friendly and super-fast UI library for building web apps
+                with Node.js.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-tech="preact">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Preact</h3>
+              <p class="text-gray-700">
+                A fast and efficient alternative to React for building modern
+                web applications.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-language="crystal">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Crystal</h3>
+              <p class="text-gray-700">
+                A statically typed, compiled language with a Ruby-inspired
+                syntax and performance.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-language="julia">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Julia</h3>
+              <p class="text-gray-700">
+                A high-level, high-performance programming language for
+                technical computing.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-language="dart">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Dart</h3>
+              <p class="text-gray-700">
+                A client-optimized language for building fast apps on multiple
+                platforms.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-language="pony">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Pony</h3>
+              <p class="text-gray-700">
+                A high-performance, actor-model, and capabilities-secure
+                programming language.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-language="ballerina">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Ballerina</h3>
+              <p class="text-gray-700">
+                A cloud-native programming language for building
+                microservices-oriented applications.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-language="fsharp">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">F#</h3>
+              <p class="text-gray-700">
+                A functional-first programming language for the .NET
+                ecosystem.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-language="red">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Red</h3>
+              <p class="text-gray-700">
+                A functional and symbolic programming language for easy system
+                scripting.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-language="hack">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Hack</h3>
+              <p class="text-gray-700">
+                A programming language for HHVM that enhances PHP with static
+                typing.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-language="zig">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Zig</h3>
+              <p class="text-gray-700">
+                A statically typed, systems programming language designed for
+                robustness.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-language="raku">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Raku</h3>
+              <p class="text-gray-700">
+                A highly expressive, versatile, and gradual programming
+                language.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-language="haxe">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Haxe</h3>
+              <p class="text-gray-700">
+                A high-level, cross-platform programming language and toolkit.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 1, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-language="vlang">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Vlang</h3>
+              <p class="text-gray-700">
+                A simple, fast, and safe programming language focused on
+                readability and performance.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 4, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-language="chapel">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Chapel</h3>
+              <p class="text-gray-700">
+                An open-source, parallel programming language designed for
+                productive parallel computing.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 3, 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-language="dlang">
+          <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Dlang</h3>
+              <p class="text-gray-700">
+                A systems programming language with a focus on safety,
+                performance, and productivity.
+              </p>
+            </div>
+            <div class="flex items-center justify-between p-4 bg-gray-200">
+              <button class="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Learn More
+              </button>
+              <span class="text-sm text-gray-600">Last Updated: January 2, 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add the remaining course cards with the same structure -->
+      </div>
+    </div>
+
+    <!-- !!!!!!!!!!!!!!!!! Explore Course Categories !!!!!!!!!!!!!!!!! -->
+    <section class="bg-gradient-to-r from-green-400 to-blue-500 py-16 px-8">
+      <h2 class="text-4xl font-bold text-white mb-8 text-center">
+        Explore Course Categories
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Programming -->
+        <div class="p-6 bg-white rounded-lg shadow-md flex flex-col justify-center items-center text-center">
+          <i class="fas fa-laptop-code text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Programming Fundamentals</h3>
+          <p class="text-gray-700">
+            Learn the basics of programming languages and logic.
+          </p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow-md flex flex-col justify-center items-center text-center">
+          <i class="fas fa-code text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+          <p class="text-gray-700">
+            Explore HTML, CSS, JavaScript, and web development frameworks.
+          </p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow-md flex flex-col justify-center items-center text-center">
+          <i class="fas fa-mobile-alt text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Mobile App Development</h3>
+          <p class="text-gray-700">
+            Build apps for iOS and Android using React Native or Swift.
+          </p>
+        </div>
+        <!-- Add more categories -->
+        <!-- <div> ... </div> -->
+      </div>
+    </section>
+
+    <!-- !!!!!!!!!!!!!!!!! Programming & Technologies !!!!!!!!!!!!!!!!! -->
+    <section class="bg-white px-8 py-12">
+      <h2 class="text-4xl font-bold text-black mb-8 text-center">
+        Discover Programming Languages & Technologies
+      </h2>
+      <div class="grid grid-cols-3 gap-6 md:grid-cols-4 lg:grid-cols-6 text-center">
+        <!-- Programming Languages -->
+        <div class="language-box">
+          <img src="./assets/html5.jpg" alt="HTML Icon" class="h-24 max-w-32 mx-auto mb-3 rounded-full" />
+          <span class="language-text text-center font-semibold">HTML</span>
+        </div>
+        <div class="technology-box">
+          <img src="./assets/css.png" alt="React.js Icon" class="h-24 max-w-32 mx-auto mb-3 rounded-full" />
+          <span class="technology-text text-center font-semibold">CSS</span>
+        </div>
+        <div class="technology-box">
+          <img src="./assets/js.png" alt="React.js Icon" class="h-24 max-w-32 mx-auto mb-3 rounded-full" />
+          <span class="technology-text text-center font-semibold">JavaScript</span>
+        </div>
+        <div class="technology-box">
+          <img src="./assets/react.png" alt="React.js Icon" class="h-24 max-w-32 mx-auto mb-3 rounded-full" />
+          <span class="technology-text text-center font-semibold">React.js</span>
+        </div>
+        <div class="technology-box">
+          <img src="./assets/angular.png" alt="React.js Icon" class="h-24 max-w-32 mx-auto mb-3 rounded-full" />
+          <span class="technology-text text-center font-semibold">Angular</span>
+        </div>
+        <div class="technology-box">
+          <img src="./assets/vue.png" alt="React.js Icon" class="h-24 max-w-32 mx-auto mb-3 rounded-full" />
+          <span class="technology-text text-center font-semibold">Vue.js</span>
+        </div>
+        <div class="language-box">
+          <img src="./assets/next.png" alt="HTML Icon" class="h-24 max-w-32 mx-auto mb-3 rounded-full" />
+          <span class="language-text text-center font-semibold">Next.js</span>
+        </div>
+        <div class="technology-box">
+          <img src="./assets/express.png" alt="React.js Icon" class="h-24 max-w-32 mx-auto mb-3 rounded-full" />
+          <span class="technology-text text-center font-semibold">Express.js</span>
+        </div>
+        <div class="language-box">
+          <img src="./assets/django.png" alt="HTML Icon" class="h-24 max-w-32 mx-auto mb-3 rounded-full" />
+          <span class="language-text text-center font-semibold">Django</span>
+        </div>
+        <div class="technology-box">
+          <img src="./assets/spring.jpg" alt="React.js Icon" class="h-24 max-w-32 mx-auto mb-3 rounded-full" />
+          <span class="technology-text text-center text-white font-semibold">Spring Boot</span>
+        </div>
+        <div class="technology-box">
+          <img src="./assets/bootstrape.jpg" alt="React.js Icon" class="h-24 max-w-32 mx-auto mb-3 rounded-full" />
+          <span class="technology-text text-center text-white font-semibold">Bootstrap</span>
+        </div>
+        <div class="technology-box">
+          <img src="./assets/tailwindcss.jpg" alt="React.js Icon" class="h-24 max-w-32 mx-auto mb-3 rounded-full" />
+          <span class="technology-text text-center text-white font-semibold">Tailwind CSS</span>
+        </div>
+      </div>
+    </section>
+
+    <!--  !!!!!!!!!!!!!!!!! Students Testimonials !!!!!!!!!!!!!!!!!!!!!! -->
+    <section class="bg-gray-100 py-16 px-8">
+      <h2 class="text-4xl font-bold text-center mb-8">
+        Student Testimonials
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Testimonial 1 -->
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <p class="text-gray-600 mb-4">
+            "The courses here have been instrumental in shaping my coding
+            journey. The instructors are top-notch, and the hands-on projects
+            have boosted my confidence."
+          </p>
+          <h3 class="text-lg font-semibold">John Doe</h3>
+          <p class="text-sm text-gray-500">Web Developer</p>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <p class="text-gray-600 mb-4">
+            "I found the platform incredibly user-friendly. The interactive
+            lessons and assignments made learning to code a fun experience.
+            Highly recommended!"
+          </p>
+          <h3 class="text-lg font-semibold">Jane Smith</h3>
+          <p class="text-sm text-gray-500">Aspiring Developer</p>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <p class="text-gray-600 mb-4">
+            "The tutorials are well-structured and comprehensive. The
+            community support and resources provided have been invaluable in
+            my growth as a programmer."
+          </p>
+          <h3 class="text-lg font-semibold">Alex Johnson</h3>
+          <p class="text-sm text-gray-500">Software Engineer</p>
+        </div>
+        <!-- Add more testimonials -->
+        <!-- <div> ... </div> -->
+      </div>
+    </section>
+
+    <!-- !!!!!!!!!!!!!!!!! Upcoming Events !!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <section class="bg-gradient-to-r from-purple-400 to-indigo-500 py-16 px-8">
+      <h2 class="text-4xl font-bold text-white text-center mb-8">
+        Upcoming Events
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Event 1 -->
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">
+            Tech Talk: Advanced JavaScript Concepts
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Join us for an in-depth discussion on advanced JavaScript
+            techniques. Perfect for experienced developers.
+          </p>
+          <div class="flex items-center justify-between">
+            <p class="text-sm text-gray-500">March 15, 2024</p>
+            <a href="#" class="text-blue-600 hover:underline">Learn More</a>
+          </div>
+        </div>
+        <!-- Event 2 -->
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Web Development Bootcamp</h3>
+          <p class="text-gray-600 mb-4">
+            A comprehensive bootcamp covering HTML, CSS, and JavaScript.
+            Suitable for beginners.
+          </p>
+          <div class="flex items-center justify-between">
+            <p class="text-sm text-gray-500">April 5-7, 2024</p>
+            <a href="#" class="text-blue-600 hover:underline">Learn More</a>
+          </div>
+        </div>
+        <!-- Event 3 -->
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">
+            Machine Learning Workshop
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Get hands-on experience with machine learning algorithms.
+            Intermediate level.
+          </p>
+          <div class="flex items-center justify-between">
+            <p class="text-sm text-gray-500">April 20, 2024</p>
+            <a href="#" class="text-blue-600 hover:underline">Learn More</a>
+          </div>
+        </div>
+        <!-- Add more events -->
+        <!-- <div> ... </div> -->
+      </div>
+    </section>
+
+    <!-- !!!!!!!!!!!!!!!!! Features Courese !!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <section class="bg-gray-200 py-16 px-8">
+      <h2 class="text-4xl font-bold text-center mb-8">Featured Courses</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Featured Course 1 -->
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">React.js Masterclass</h3>
+          <p class="text-gray-600 mb-4">
+            A comprehensive course covering React.js fundamentals to advanced
+            concepts.
+          </p>
+          <div class="flex items-center justify-between">
+            <p class="text-sm text-gray-500">Duration: 6 weeks</p>
+            <a href="#" class="text-blue-600 hover:underline">Enroll Now</a>
+          </div>
+        </div>
+        <!-- Featured Course 2 -->
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">
+            Full-Stack Web Development Bootcamp
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Become proficient in full-stack development with this intensive
+            bootcamp.
+          </p>
+          <div class="flex items-center justify-between">
+            <p class="text-sm text-gray-500">Duration: 10 weeks</p>
+            <a href="#" class="text-blue-600 hover:underline">Enroll Now</a>
+          </div>
+        </div>
+        <!-- Featured Course 3 -->
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Python for Data Science</h3>
+          <p class="text-gray-600 mb-4">
+            Learn Python programming for data analysis and machine learning.
+          </p>
+          <div class="flex items-center justify-between">
+            <p class="text-sm text-gray-500">Duration: 4 weeks</p>
+            <a href="#" class="text-blue-600 hover:underline">Enroll Now</a>
+          </div>
+        </div>
+        <!-- Add more featured courses -->
+        <!-- <div> ... </div> -->
+      </div>
+    </section>
+
+    <!--  !!!!!!!!!!!!!!!!!!!! Explores Frame Works !!!!!!!!!!! -->
+    <section class="bg-white px-8 py-12">
+      <h2 class="text-4xl font-bold text-DarkYellow mb-8 text-center">
+        Explore Frameworks, Technologies & Libraries
+      </h2>
+      <div class="grid grid-cols-3 gap-6 md:grid-cols-4 lg:grid-cols-6">
+        <!-- Frameworks -->
+        <div
+          class="p-4 bg-indigo-600 hover:bg-indigo-500 rounded-lg shadow-md flex items-center justify-center text-white font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          <span>React Native</span>
+        </div>
+        <div
+          class="p-4 bg-blue-600 hover:bg-blue-500 rounded-lg shadow-md flex items-center justify-center text-white font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          <span>Angular</span>
+        </div>
+        <div
+          class="p-4 bg-red-600 hover:bg-red-500 rounded-lg shadow-md flex items-center justify-center text-white font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          <span>Vue.js</span>
+        </div>
+        <div
+          class="p-4 bg-green-600 hover:bg-green-500 rounded-lg shadow-md flex items-center justify-center text-white font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          <span>Express.js</span>
+        </div>
+        <div
+          class="p-4 bg-yellow-600 hover:bg-yellow-500 rounded-lg shadow-md flex items-center justify-center text-white font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          <span>Django</span>
+        </div>
+        <div
+          class="p-4 bg-purple-600 hover:bg-purple-500 rounded-lg shadow-md flex items-center justify-center text-white font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          <span>Spring Boot</span>
+        </div>
+        <!-- Libraries & Technologies -->
+        <div
+          class="p-4 bg-gray-600 hover:bg-gray-500 rounded-lg shadow-md flex items-center justify-center text-white font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          <span>Redux</span>
+        </div>
+        <div
+          class="p-4 bg-pink-600 hover:bg-pink-500 rounded-lg shadow-md flex items-center justify-center text-white font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          <span>jQuery</span>
+        </div>
+        <div
+          class="p-4 bg-cyan-600 hover:bg-cyan-500 rounded-lg shadow-md flex items-center justify-center text-white font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          <span>Bootstrap</span>
+        </div>
+        <div
+          class="p-4 bg-orange-600 hover:bg-orange-500 rounded-lg shadow-md flex items-center justify-center text-white font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          <span>Tailwind CSS</span>
+        </div>
+        <div
+          class="p-4 bg-teal-600 hover:bg-teal-500 rounded-lg shadow-md flex items-center justify-center text-white font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          <span>Socket.io</span>
+        </div>
+        <div
+          class="p-4 bg-lime-600 hover:bg-lime-500 rounded-lg shadow-md flex items-center justify-center text-white font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          <span>GraphQL</span>
+        </div>
+        <!-- Add more framework, technology, or library boxes similarly -->
+        <!-- ... -->
+      </div>
+    </section>
+
+    <!-- !!!!!!!!!!!!!!!!! Success Stories !!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <section class="bg-gradient-to-r from-blue-500 to-indigo-600 py-16 px-8">
+      <h2 class="text-4xl font-bold text-center text-white mb-8">
+        Success Stories
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Testimonial 1 -->
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <p class="text-gray-700 mb-4">
+            "This platform helped me enhance my coding skills exponentially.
+            The resources provided are top-notch!"
+          </p>
+          <p class="text-gray-500">- John Doe</p>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <p class="text-gray-700 mb-4">
+            "The tutorials here are well-structured, easy to follow, and
+            incredibly beneficial for beginners."
+          </p>
+          <p class="text-gray-500">- Emily Smith</p>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <p class="text-gray-700 mb-4">
+            "I found the mentorship program immensely valuable. It guided me
+            to create my first web app!"
+          </p>
+          <p class="text-gray-500">- Alex Johnson</p>
+        </div>
+        <!-- Add more testimonials -->
+        <!-- <div> ... </div> -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ******************** || FEEDBACK  *********************** -->
+  <section class=" p-8 rounded-lg shadow-md">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Feedback Area</h2>
+    <form id="feedbackForm" class="flex flex-col items-center">
+      <div class="w-full mb-6">
+        <label for="comment" class="block text-lg mb-2">Your Comment:</label>
+        <textarea id="comment" name="comment"
+          class="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring focus:border-blue-500" rows="6"
+          placeholder="Type your feedback here..."></textarea>
+      </div>
+      <div class="w-full flex justify-center">
+        <button type="submit"
+          class="bg-DarkYellow text-white px-8 py-3 rounded-md hover:bg-DarkPurple focus:outline-none focus:ring focus:border-blue-700 transition-all duration-300 ease-in-out">
+          Submit
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- ******************** || FOOTER *********************** -->
+  <footer class=" py-8 lg:mx-auto lg:my-auto">
+    <div class="container mx-auto flex flex-col lg:flex-row justify-between px-4">
+      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!! JasGiigli Brand !!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <div class="mb-4 lg:mb-0">
+        <img src="https://pbs.twimg.com/profile_images/1682797230753988608/voQX5PoP_400x400.jpg"
+          class="rounded-full h-20 w-20" alt="JasGiiglitech logo" />
+        <p class="mt-2">
+          The
+          <span class="font-bold text-2xl text-yellow-600 hover:text-purple-500">JasGiigli Tech</span>
+          by:<br />
+          <span class="font-bold text-2xl">EN Junaid Ali Shah</span>
+        </p>
+      </div>
+
+      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!! Quick Links !!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <div class="mb-4 lg:mb-0 hover:text-yellow-600">
+        <h3 class="mb-2 font-bold text-2xl underline">Quick Links</h3>
+        <ul>
+          <li>
+            <a href="./index.html" class="hover:text-purple-500">Home</a>
+          </li>
+          <li>
+            <a href="./pages/about.html" class="hover:text-purple-500">About Us</a>
+          </li>
+          <li>
+            <a href="./pages/services.html" class="hover:text-purple-500">Services</a>
+          </li>
+          <li>
+            <a href="./pages/products.html" class="hover:text-purple-500">Products</a>
+          </li>
+          <li>
+            <a href="./pages/contact.html" class="hover:text-purple-500">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Divider for Mobile -->
+      <div class="lg:hidden">
+        <div class="border-4 border-yellow-600 underline">contact uS</div>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="hover:text-yellow-600">
+        <h3 class="font-bold text-2xl mb-2 underline">Contact Us</h3>
+        <p>
+          <a href="https://twitter.com/jasgiigli" class="hover:text-purple-500" target="_blank">Twitter!</a>
+        </p>
+        <p>
+          <a href="https://www.reddit.com/user/JasGiigli/" class="hover:text-purple-500" target="_blank">Reddit</a>
+        </p>
+        <p>
+          <a href="https://github.com/JasGiigli" class="hover:text-purple-500" target="_blank">GitHub</a>
+        </p>
+        <p>
+          <a href="https://www.pinterest.com/JasGiigli/" class="hover:text-purple-500" target="_blank">Pintrest</a>
+        </p>
+        <p>
+          <a href="https://www.behance.net/overview?client_id=BehanceWebSusi1&scope=AdobeID,openid,gnav,sao.cce_private,creative_cloud,creative_sdk,be.pro2.external_client,additional_info.rolesstate={%22ac%22:%22behance.net%22,%22csrf%22:%22076357cb-8363-4c09-8e1f-31a1f508ba86%22,%22timestamp%22:%221699942428127%22,%22context%22:{%22intent%22:%22signIn%22},%22jslibver%22:%22v2-v0.39.0-39-g71c9b5a%22,%22nonce%22:%224156986983619199%22}&"
+            class="hover:text-purple-500" target="_blank">Behance</a>
+        </p>
+
+        <!-- More contact links -->
+      </div>
+    </div>
+
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!! Social Media Icons !!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <div class="mt-8 md:block shadow-2xl  border-2 border-yellow-600">
+      <ul class="flex flex-wrap justify-center space-x-2 lg:space-x-20  p-2 md:p-28 items-center">
+        <!-- &Icons for Social Media -->
+        <li class="border-2 border-white rounded-full ">
+          <a href="https://twitter.com/jasgiigli" target="_blank" class="text-2xl">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkLiIu3EA38tw8XYmdE_ubT4zu4wA76JHYzmIpkmQJqE2ZzJZ1Hr_WH1xJFDqqSDj39rs&usqp=CAU"
+              class="rounded-full w-20 h-20" alt="Twitter Icon" />
+          </a>
+        </li>
+
+        <li class="rounded-full  border-2 border-slate-950">
+          <a href="https://github.com/JasGiigli" target="_blank" class="text-2xl">
+            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 16 16" fill="currentColor"
+              class="bi bi-github rounded-full w-20 h-20">
+              <path fill-rule="evenodd"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.41 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.56.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+              </path>
+            </svg>
+          </a>
+        </li>
+
+        <li class="rounded-full border-2 border-slate-950">
+          <a href="https://stackoverflow.com/users/21968691/jasgiigli" target="_blank" class="text-3xl">
+            <img src="./assets//stackovervflow.png" class="rounded-full w-20 h-20" alt="Quora Icon" />
+          </a>
+        </li>
+        <li class="rounded-full">
+          <a href="https://www.quora.com/profile/JasGiigli-1" target="_blank" class="text-3xl">
+            <img src="./assets/quora.png" class="rounded-full w-20 h-20" alt="StackOver flow Icon" />
+          </a>
+        </li>
+
+        <!-- Add similar blocks for other social media icons -->
+      </ul>
+    </div>
+
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!! Copyright Information !!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <div class="grid place-content-center bg-slate-950 ">
+      <p class=" p-4 font-semibold text-xl text-white">
+        &copy; 2023 - 2024 All Rights Reserved by
+        <span class="text-2xl hover:text-white text-yellow-600">JasGiigli Tech</span>
+      </p>
+    </div>
+  </footer>
+</body>
+
+<!-- ******************** || NO-SCRIPT *********************** -->
+<noscript>
+  please! enable JavaScript in your browser setting for watching JasGiigli
+  Tech Innovator
+</noscript>
+
+<!-- ******************* || EXTERNAl-SCRIPT ****************** -->
+<script src="index.js"></script>
+
+</html>

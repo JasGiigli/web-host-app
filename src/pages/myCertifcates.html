@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sass Certificate</title>
+    <style>
+      /* Styles for Certificate Page */
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      .buttonContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .showCertificate {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .imageCertificate {
+        background-color: #3498db;
+        color: #fff;
+      }
+
+      .pdfCertificate {
+        background-color: #e74c3c;
+        color: #fff;
+      }
+
+      .showCertificate:hover {
+        transform: scale(1.05);
+      }
+      .certificateContainer {
+        max-height: 100vh; /* Set maximum height of the container */
+        overflow-y: auto; /* Enable vertical scroll if content exceeds viewport */
+        padding: 10px;
+      }
+
+      /* Additional styles for individual certificates (optional) */
+      .certificate {
+        margin-bottom: 20px;
+        /* Add other certificate styles as needed */
+      }
+      /* Styles for displaying certificate modal */
+      .certificateModal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        height: 80vh;
+        background-color: white;
+        border-radius: 10px;
+        z-index: 999;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .certificateModal img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: auto;
+      }
+
+      /* Additional styles for overlay (optional) */
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 998;
+      }
+      .certificateContainer img {
+        max-width: 100%; /* Adjust the maximum width of the image */
+        max-height: 80vh; /* Adjust the maximum height of the image */
+        display: block;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Achieved Certificates</h1>
+    <div class="buttonContainer">
+      <button
+        class="showCertificate imageCertificate"
+        data-type="image"
+        data-src="../1-ResponsiveWeb1Design.PNG"
+      >
+        Responsive Web Design Certificate
+      </button>
+      <button
+        class="showCertificate imageCertificate"
+        data-type="image"
+        data-src="../2-SassFundamental.jpg"
+      >
+        Sass Fundamental Certificate
+      </button>
+
+      <button
+        class="showCertificate imageCertificate"
+        data-type="image"
+        data-src="../3-Front-End Development.jpg"
+      >
+        Front-End Development Certificate
+      </button>
+      <button
+        class="showCertificate imageCertificate"
+        data-type="image"
+        data-src="../4-Introdunction to JavaScript.jpg"
+      >
+        Introdunction to JavaScript Certificate
+      </button>
+      <button
+        class="showCertificate imageCertificate"
+        data-type="image"
+        data-src="../5-JavaScript Projects.jpg"
+      >
+        JavaScript Projects Certificate
+      </button>
+      <button><a href="./index.html">Home</a></button>
+      <!-- Add other certificate buttons -->
+    </div>
+
+    <div class="certificateContainer">
+      <!-- Placeholder for certificate content -->
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const showCertificateButtons =
+          document.querySelectorAll(".showCertificate");
+        const overlay = document.querySelector(".overlay");
+        const certificateModal = document.querySelector(".certificateModal");
+        const modalImage = document.createElement("img");
+        const certificateContainer = document.querySelector(
+          ".certificateContainer"
+        );
+
+        showCertificateButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const type = button.getAttribute("data-type");
+            const src = button.getAttribute("data-src");
+
+            certificateContainer.innerHTML = "";
+
+            if (type === "image") {
+              const image = document.createElement("img");
+              image.src = src;
+              image.alt = "Certificate Image";
+              certificateContainer.appendChild(image);
+            } else if (type === "pdf") {
+              const pdf = document.createElement("object");
+              pdf.type = "application/pdf";
+              pdf.data = src;
+              pdf.style.width = "100%";
+              pdf.style.height = "500px";
+              certificateContainer.appendChild(pdf);
+            }
+
+            overlay.style.display = "block";
+            certificateModal.style.display = "block";
+            modalImage.src = src;
+            modalImage.alt = "Certificate Image";
+            certificateModal.appendChild(modalImage);
+          });
+        });
+
+        overlay.addEventListener("click", () => {
+          overlay.style.display = "none";
+          certificateModal.style.display = "none";
+          modalImage.remove();
+        });
+      });
+    </script>
+  </body>
+</html>
